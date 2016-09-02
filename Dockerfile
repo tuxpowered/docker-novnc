@@ -22,10 +22,10 @@ RUN apt-get update -y && \
     chmod 0755 /start_novnc.sh && \
     chmod 0755 /entrypoint.sh && \
     chmod 0755 /install.sh && \
-    /install.sh && \
     apt-get autoclean && \
     apt-get autoremove && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* &&\
+    /install.sh
 
 VOLUME [ "/var/crashplan", "/storage" ]
 
