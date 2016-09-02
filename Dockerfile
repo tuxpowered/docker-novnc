@@ -17,9 +17,10 @@ RUN apt-get update -y && \
     cd /root && git clone https://github.com/kanaka/noVNC.git && \
     cd noVNC/utils && git clone https://github.com/kanaka/websockify websockify && \
     cd /root && \
+    chmod 0755 /crashplan.exp && \
+    chmod 0755 /crashplan.sh && \
     chmod 0755 /start_novnc.sh && \
     chmod 0755 /entrypoint.sh && \
-    chmod 0755 /crashplan.sh && \
     chmod 0755 /install.sh && \
     /install.sh && \
     apt-get autoclean && \
