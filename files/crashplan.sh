@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Start NoVNC
+/start_novnc.sh &
+
 # SIGTERM-handler
 term_handler() {
 
